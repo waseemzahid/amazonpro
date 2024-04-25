@@ -14,33 +14,33 @@ const Products = () => {
     fetchProducts();
   }, []);
 
-  const fetchProducts = async (category = null) => {
-    let fetchedProducts = [];
+  // const fetchProducts = async (category = null) => {
+  //   let fetchedProducts = [];
 
-      switch (category) {
-          case 'all':
-              fetchedProducts = await getProducts();
-              break;
-          case 'phones':
-              fetchedProducts = await getPhones();
-              break;
-          case 'phonecases':
-              fetchedProducts = await getPhoneCases();
-              break;
-          case 'watches':
-              fetchedProducts = await getWatches();
-              break;
-          case 'accessories':
-              fetchedProducts = await getAccessories();
-              break;
-          default:
-              fetchedProducts = await getProducts();
-              break;
-      }
+  //     switch (category) {
+  //         case 'all':
+  //             fetchedProducts = await getProducts();
+  //             break;
+  //         case 'phones':
+  //             fetchedProducts = await getPhones();
+  //             break;
+  //         case 'phonecases':
+  //             fetchedProducts = await getPhoneCases();
+  //             break;
+  //         case 'watches':
+  //             fetchedProducts = await getWatches();
+  //             break;
+  //         case 'accessories':
+  //             fetchedProducts = await getAccessories();
+  //             break;
+  //         default:
+  //             fetchedProducts = await getProducts();
+  //             break;
+  //     }
 
-    setProducts(fetchedProducts);
-    setSelectedCategory(category);
-  };
+  //   setProducts(fetchedProducts);
+  //   setSelectedCategory(category);
+  // };
 
   return (
     <div className='lg:mt-10 lg:mb-30'>
