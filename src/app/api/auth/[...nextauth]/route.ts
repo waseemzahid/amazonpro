@@ -12,10 +12,10 @@ const authOptions = {
       clientId: process.env.GITHUB_ID!,
       clientSecret: process.env.GITHUB_SECRET!,
     }),
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-    }),
+    // GoogleProvider({
+    //   clientId: process.env.GOOGLE_CLIENT_ID!,
+    //   clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+    // }),
     // LinkedInProvider({
     //   clientId: process.env.LINKEDIN_CLIENT_ID!,
     //   clientSecret: process.env.LINKEDIN_CLIENT_SECRET!,
@@ -28,11 +28,11 @@ const authOptions = {
     //   clientId: process.env.DISCORD_CLIENT_ID!,
     //   clientSecret: process.env.DISCORD_CLIENT_SECRET!,
     // }),
-    Auth0Provider({
-      clientId: process.env.AUTH0_CLIENT_ID!,
-      clientSecret: process.env.AUTH0_CLIENT_SECRET!,
-      issuer: process.env.AUTH0_ISSUER,
-    }),
+    // Auth0Provider({
+    //   clientId: process.env.AUTH0_CLIENT_ID!,
+    //   clientSecret: process.env.AUTH0_CLIENT_SECRET!,
+    //   issuer: process.env.AUTH0_ISSUER,
+    // }),
   ],
 };
 
