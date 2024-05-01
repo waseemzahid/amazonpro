@@ -24,7 +24,7 @@ const Product = ({ products }: Item) => {
           key={item._id}
           className="relative bg-white group border-[1px] border-zinc-200 hover:border-zinc-500 duration-300 hover:shadow-xl overflow-hidden"
         >
-          <Link href={{ pathname: `/${item?._id}`, query: { _id: item?._id } }}>
+          {/*<Link href={{ pathname: `/${item?._id}`, query: { _id: item?._id } }}> */}
             <Image
               src={item?.image}
               alt="Product image"
@@ -32,7 +32,7 @@ const Product = ({ products }: Item) => {
               height={500}
               className="w-full h-80 object-contain lg:object-cover group-hover:scale-105 duration-300"
             />
-          </Link>
+          {/*</Link> */}
           <Heart
             onClick={() => {
               dispatch(addToFavorite(item))
@@ -62,12 +62,12 @@ const Product = ({ products }: Item) => {
               >
                 Add to cart
               </button>
-              <Link
+              {/*<Link
                 className="uppercase font-semibold hover:text-designColor duration-300"
                 href={{ pathname: `/${item?._id}`, query: { _id: item?._id } }}
               >
                 More Info
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
