@@ -21,6 +21,7 @@ const page = async ({ searchParams }: Props) => {
     return item
   }
   const product = singleProduct(_id)
+  console.log(product);
   return (
     <Container className="flex items-center flex-col md:flex-row px-4 xl:px-0">
       <div className="w-full md:w-1/2 overflow-hidden flex items-center justify-center p-10">
