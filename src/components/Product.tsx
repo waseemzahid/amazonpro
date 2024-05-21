@@ -46,8 +46,9 @@ const Product = ({ products }: Item) => {
             className="absolute top-4 right-4 text-zinc-500 w-5 h-5 hover:text-black cursor-pointer duration-200"
           />
           <div className="p-4 bg-zinc-100 group-hover:bg-zinc-50 group-hover:shadow-xl duration-300 lg:text-left text-center">
-        <div className="flex items-center justify-between text-sm mt-2"> {/* Container for inline display */}
-          <div className="flex-1">
+
+        <div className="flex flex-col sm:flex-row items-center justify-between text-sm mt-2"> {/* Container for inline display */}
+          <div className="flex-1 sm:mr-4">
             <p className="uppercase group-hover:text-designColor duration-300">
               {item?.title}
             </p>
@@ -55,23 +56,24 @@ const Product = ({ products }: Item) => {
               <FormattedPrice amount={item?.price} className="" />
             </p>
           </div>
-          <button
-            onClick={() => {
-              dispatch(addToCart(item));
-              toast.success(`${item?.title} is added to Cart!`);
-            }}
-            className="text-base font-medium text-white bg-designColor rounded-md px-2 py-1 hover:bg-zinc-950"
+            <button
+              onClick={() => {
+                dispatch(addToCart(item));
+                toast.success(`${item?.title} is added to Cart!`);
+              }}
+              className="text-base font-medium text-white bg-designColor rounded-md px-2 py-1 hover:bg-zinc-950 w-full sm:w-auto mt-2 md:mt-0"
 
-          >
-            Add to cart
-          </button>
+            >
+              Add to cart
+            </button>
             {/*<Link
                 className="uppercase font-semibold hover:text-designColor duration-300"
                 href={{ pathname: `/${item?._id}`, query: { _id: item?._id } }}
               >
                 More Info
               </Link> */}
-        </div>
+          </div>
+
       </div>
         </div>
       ))}
